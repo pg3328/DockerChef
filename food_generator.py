@@ -39,7 +39,7 @@ def submit():
     """
     ingredients = request.form.get("ingredients")
     res = recipe(ingredients)
-    return render_template("recipe.html", result=res)
+    return render_template("recipe_list.html", result=res)
 
 
 @app.route("/", methods=["GET", "POST"])
