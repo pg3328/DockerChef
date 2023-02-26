@@ -6,13 +6,13 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Fixed top navbar example · Bootstrap v5.0</title>
+    <title>Recipe Finder</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-fixed/">
-
+    <link rel="icon" href="/static/images/logo.png" type="image/x-icon">
     
 
-    <!-- Bootstrap core CSS -->
+
 <link href="/static/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -125,35 +125,14 @@
       }
 
     </style>
-    <!-- Custom styles for this template -->
     <link href="navbar-top-fixed.css" rel="stylesheet">
   </head>
   <body>
     
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Recipe Finder</a>
-    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
-    <!-- <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
+    <a class="navbar-brand" href="/">Recipe Finder</a>
     </div>
-  </div>
 </nav>
 
   <div>
@@ -195,8 +174,8 @@
   <div class="bg-light p-5 rounded">
     <h1>Finding Recipes</h1>
     <p class="lead"> As an unprofessional chef on a foreign land, trying to cook food takes a lot of ingredients and buying a lot of them 
-      in a packs of 5 pounds and 10 pounds leaves a ton of ingredients unused, Using this tool we can create a new recipe with the left over 
-      ingrerdients. 
+      in a packs of 5 pounds and 10 pounds leaves a ton of ingredients unused, using this tool we can find a recipe to cook with the leftover
+      ingredients.
     </p>
     <form action="/submit" method="POST">
         <label for="ingredients">Please enter the ingredients available in the below text box in a comma separated manner for retreiving the best possible recipe. </label>

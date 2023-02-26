@@ -6,14 +6,12 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Recipe generator</title>
+    <title>Recipe List</title>
+
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
-
-    
-
-    <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="icon" href="/static/images/logo.png" type="image/x-icon">
+    <link href="/static/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -29,6 +27,19 @@
           font-size: 3.5rem;
         }
       }
+      .recipe-title {
+        max-width: 400px; /* adjust this value to fit your needs */
+        white-space: nowrap;
+        overflow: hidden;
+         text-overflow: ellipsis;
+        }
+
+        @media (max-width: 576px) {
+        .recipe-title {
+            max-width: 100%;
+            white-space: normal;
+           }
+}
     </style>
 
     
@@ -36,34 +47,13 @@
   <body>
     
 <header>
-  <!-- <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About</h4>
-          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-            <li><a href="#" class="text-white">Like on Facebook</a></li>
-            <li><a href="#" class="text-white">Email me</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div> -->
+
   <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container">
-      <!-- <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <strong>Album</strong>
-      </a> -->
-      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Recipe Finder</a>
     </div>
+    </nav>
   </div>
 </header>
 
@@ -83,12 +73,12 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col">
             <div class="card shadow-sm">
-                <h3>Recipe: {{result.title_0}}</h3>
+                <h3 class="recipe-title">Recipe: {{result.title_0}}</h3>
                 <h4> Cooking Time: {{result.time_0}} </h4>
                 <img src="/static/images/plate.png" alt="Recipe Image">
                 
               <div class="card-body">
-                <p class="card-text">{{result.description_0}}</p>
+<!--                <p class="card-text">{{result.description_0}}</p>-->
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <form action="/getdata" method="post">
@@ -103,11 +93,11 @@
           </div>
           <div class="col">
             <div class="card shadow-sm">
-                <h3>Recipe: {{result.title_1}}</h3>
+                <h3 class="recipe-title">Recipe: {{result.title_1}}</h3>
                 <h4> Cooking Time: {{result.time_1}}</h4>
                 <img src="/static/images/plate.png" alt="Recipe Image">
               <div class="card-body">
-                <p class="card-text">{{result.description_1}}</p>
+<!--                <p class="card-text">{{result.description_1}}</p>-->
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <form action="/getdata" method="post">
@@ -122,11 +112,11 @@
           </div>
           <div class="col">
             <div class="card shadow-sm">
-                <h3>Recipe: {{result.title_2}}</h3>
+                <h3 class="recipe-title">Recipe: {{result.title_2}}</h3>
                 <h4> Cooking Time: {{result.time_2}}</h4>
                 <img src="/static/images/plate.png" alt="Recipe Image">
               <div class="card-body">
-                <p class="card-text">{{result.description_2}}</p>
+<!--                <p class="card-text">{{result.description_2}}</p>-->
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <form action="/getdata" method="post">
@@ -134,8 +124,6 @@
                         <button type="submit" class="btn btn-sm btn-outline-secondary" >View</button>
                     </form>
                   </div>
-                  
-                 
                 </div>
               </div>
             </div>
@@ -156,10 +144,6 @@
     </div>
   </div>
 </footer>
-
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-      
+    <script src="/static/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
