@@ -5,7 +5,8 @@ from tf_idf import TF_IDF
 API_KEY = "rcaGhp0Af80tcX6DHEEvDbT0XNEiV3YZqi2fqO5YDfCAtOa001OS0VkJ"
 IMAGE_URL = 'https://api.pexels.com/v1/search'
 app = Flask(__name__)
-
+model = TF_IDF()
+model.pre_processing()
 
 
 @app.route("/getdata", methods=['POST'])
@@ -75,6 +76,5 @@ if __name__ == "__main__":
     """
         Driver for the program that starts the code. Port used is set to default port 5000
     """
-    model = TF_IDF()
-    model.pre_processing()
+    
     app.run(debug=True)
