@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Recipe generator</title>
+    <style>
+        .recipe-steps {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+ol {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+li {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+    </style>
+  </head>
+<body>
+    <p>THIS IS IT</p>
+    <div class="recipe-steps">
+        <h2>Ingredients</h2>
+        <ol>
+            {% for ingredients in result.ingredients %}
+            <li>{{ ingredients }}</li>
+          {% endfor %}
+        </ol>
+    </div>
+    <div class="recipe-steps">
+        <h2>Steps</h2>
+        <ol>
+          {% for step in result.steps %}
+            <li>{{ step }}</li>
+          {% endfor %}
+        </ol>
+      </div>
+</body>

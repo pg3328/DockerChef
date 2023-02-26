@@ -35,7 +35,8 @@ class TF_IDF():
     def extract_description(self):
         top_3_descriptions = self.top_recipes['description']
         top_3_ids = self.top_recipes['id']
-        return (top_3_descriptions, top_3_ids)
+        top_3_minutes = self.top_recipes['minutes']
+        return (top_3_descriptions, top_3_ids, top_3_minutes)
 
     def extract_detailed_info(self, id):
         frame = self.df[self.df['id'] == id]
