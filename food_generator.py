@@ -30,6 +30,7 @@ def recipe(query):
                 print(word)
 
         print("---------------")
+    return 
 
 @app.route("/submit", methods=["GET", "POST"])
 def submit():
