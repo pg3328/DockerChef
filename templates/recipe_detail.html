@@ -1,54 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Recipe generator</title>
-    <style>
-        .recipe-steps {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  margin-top: 0;
-}
-
-ol {
-  margin: 0;
-  padding: 0 0 0 20px;
-}
-
-li {
-  margin: 10px 0;
-  line-height: 1.5;
-}
-
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Recipe</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
 <body>
-    <p>THIS IS IT</p>
-    <div class="recipe-steps">
-        <h2>Ingredients</h2>
-        <ol>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <div class="card my-4">
+          <img class="card-img-top" src="/static/images/table.jpeg" alt="Recipe Image">
+          <div class="card-body">
+            <h2 class="card-title">Recipe</h2>
+            <h5 class="card-subtitle mb-2 text-muted">Ingredients:</h5>
+            <ul>
+              
             {% for ingredients in result.ingredients %}
             <li>{{ ingredients }}</li>
           {% endfor %}
-        </ol>
-    </div>
-    <div class="recipe-steps">
-        <h2>Steps</h2>
-        <ol>
-          {% for step in result.steps %}
-            <li>{{ step }}</li>
-          {% endfor %}
-        </ol>
+            </ul>
+            <h5 class="card-subtitle mb-2 text-muted">Directions:</h5>
+            <ol>
+                {% for step in result.steps %}
+                  <li>{{ step }}</li>
+                {% endfor %}
+            </ol>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>Copyright &copy; 2023
+            <br>Designed and developed by Khushi Mahesh and Pradeep Kumar Gontla</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
+</html>

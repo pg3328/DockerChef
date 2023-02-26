@@ -38,7 +38,9 @@ def recipe(query):
     
     model.get_top_3(query)
     result = {}
-    descriptions, ids, minutes = model.extract_description()
+    titles, descriptions, ids, minutes = model.extract_description()
+    for idx, title in enumerate(titles):
+        result["title_"+str(idx)] = title
     idx = 0
     for description in descriptions:
         print(description)
