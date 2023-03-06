@@ -10,6 +10,7 @@ To map the recipes to the input ingredients, a model based on TF-IDF transformer
 
 Steps to build the project:
 1. Clone the repository.
+2. Download the recipe.csv file from (https://tinyurl.com/46m9bb7b)
 2. Run `docker build -t recipeFinder .`
 3. Run `docker run -p 5001:5000 recipeFinder`
 4. The website can be accessed at `http://localhost:5001`
