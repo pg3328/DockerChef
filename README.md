@@ -1,4 +1,4 @@
-# Brick-Hack
+# DockerChef
 The project is a site for recipe suggestion based on the input ingredients
 
 Using flask, HTML, CSS and bootstrap, the backend and the frontend of the website have been built.
